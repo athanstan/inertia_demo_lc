@@ -2,6 +2,7 @@
 
     <nav class='flex space-x-8 items-center justify-between'>
         <h1 class="text-2xl font-bold">My App</h1>
+        <p>Welcome Back, {{ username }} </p>
         <ul class="flex space-x-4">
             <li>
                 <Link href="/" class='text-blue-700 hover:underline' :class="{'font-bold underline': $page.component === 'Home'}">Home</Link>
@@ -26,5 +27,11 @@
 
     export default {
         components: { Link },
+
+        computed: {
+            username() {
+                return this.$page.props.auth.user.username;
+            }
+        }
     };
 </script>
