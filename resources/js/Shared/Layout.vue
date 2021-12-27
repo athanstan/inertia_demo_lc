@@ -2,6 +2,7 @@
     <section class="py-3 px-2 bg-indigo-100">
         <header class="">
             <Nav />
+            <input type="text" value="My App">
         </header>
     </section>
 
